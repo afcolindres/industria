@@ -1,0 +1,23 @@
+#barra{
+    background-color: #0A0E47 !important;
+   }
+    #boton{
+      margin-left: auto;
+    }
+    #iconos{
+      font-size: 120px;
+      margin-bottom: 15px;
+    }
+    #columnas{
+      margin-left: 9%;
+    }
+    .fondo{
+      background-image: url("../img/fondo.jpg");
+      background-repeat: repeat-x;
+      background-size: auto;
+    }
+    #letra{
+        color: #fff;
+    }
+    .jumbotron {
+        padding: 6rem 2rem;}
