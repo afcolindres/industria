@@ -1,52 +1,42 @@
-/* #diseno{
-    background-image: url(../img/fondo_in2.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size:cover;
-
-} */
-.boton_di:hover {
-    background-color:#0431B4;
+.carrruseltext{
+    color: black;
 }
 
-#boton{
-    background-color: #0080FF;
-    color: #fff;
-}
-#contenedor{
-    background-color: #fff;
-    border-radius: 5px;
-    padding: 30px;
-    /* margin-left: auto;
-    margin-right: auto; */
-    overflow: hidden;
-    position: absolute;
-    /* height: 400px;
-    width: 500px; */
-    left: 29%;
-    top: 50%;
-    right: 29%;
-    margin-top: 100px;
-    /* margin-left: -280px; */
-    box-shadow: 2px 2px 10px #666;
-    
-}
-#imagen{
-    height: 65px;
-    display:block;
-    margin:auto;
-    margin-bottom:20px;
+.bg-dark {
+    background-color: rgb(18, 124, 189)!important;
 }
 
-.detalles{
-    margin-bottom:10px;
-    height: 100%;
-    width: 100%;
-    
-}
-.tamano{
-    height: 40px;
-    
+.navbarnav2{
+    margin-right: 38%;
 }
 
+.imagen:hover{
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    box-shadow: 0px 0px 15px 15px rgb(52, 137, 186);
+    -webkit-box-shadow: 0px 0px 15px 15px rgb(52, 137, 186);
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+}
+
+/*para la pagina de login*/
+#centrado{
+    padding-top: 100px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fondoLogin{
+    background-color: rgb(233, 236, 239);
+}
+
+.jumbotron{
+    background-color: rgb(255, 255, 255);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.bg-dark1 {
+    background-color: rgb(68, 80, 93)!important;
+}

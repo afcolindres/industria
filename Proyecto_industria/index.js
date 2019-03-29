@@ -154,6 +154,67 @@ app.post("/registrarHospital", function(req,res){
 });
 
 
-app.listen(8011, function(){ 
-    console.log("Servidor iniciado en el puerto 8011");
+app.get("/rutas", function(req,res){
+    var conexion = mysql.createConnection(credenciales);
+    conexion.query(`SELECT cod_ruta, nombre, descripcion, hora_salida, hora_llegada
+                    FROM tbl_rutas`,
+        [],
+        function(error, data, fields){
+            //console.log(data);
+            res.send(data);
+            res.end();
+            conexion.end();
+        }
+    );
+});
+
+
+app.post("/reserva", function(req,res){
+    var conexion = mysql.createConnection(credenciales);
+    conexion.query(`SELECT cod_ruta, count(*) cantidad
+                    FROM tbl_reserva
+                    WHERE cod_ruta =?
+                    GROUP BY cod_ruta`,
+        [req.body.codigo_ruta],
+        function(error, data, fields){
+            console.log(data);
+            console.log(data[0].cantidad);
+            if(data[0].cantidad<5){
+                conexion.query(`INSERT INTO tbl_reserva (cod_usuario, cod_ruta) 
+                                VALUES (?,?)`,
+                    [req.session.codigoUsuario,req.body.codigo_ruta],
+                    function(error, data, fields){
+                    }
+                );
+            }
+            else {
+                var json=[{mensaje :'1'}];
+                console.log(json);
+                res.send(json);
+            }
+            
+            res.end();
+            conexion.end();
+        }
+    );
+});
+
+app.post("/ruta", function(req,res){
+    var conexion = mysql.createConnection(credenciales);
+    conexion.query(`SELECT cod_ruta, nombre, descripcion, hora_salida, hora_llegada
+                    FROM tbl_rutas
+                    where cod_ruta=?`,
+        [req.body.codigo_ruta],
+        function(error, data, fields){
+            console.log(data);
+            res.send(data);
+            res.end();
+            conexion.end();
+        }
+    );
+});
+
+
+app.listen(8015, function(){ 
+    console.log("Servidor iniciado en el puerto 8015");
 });
