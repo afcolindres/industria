@@ -15,8 +15,21 @@
   <link href="css/principal.css" rel="stylesheet">
   <link href="css/principal2.css" rel="stylesheet">
   <link href="css/dashboard.css" rel="stylesheet">
+  
+  <!-- enlaces para el mapa -->
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script> 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="leaflet-routing-machine-3.2.11/dist/leaflet-routing-machine.css">
+    <script src="leaflet-routing-machine-3.2.11/dist/leaflet-routing-machine.js"></script>
 
-    <!-- Custom styles for this template -->
+    <style>
+      #map { 
+        width: 100%;
+        height: 580px;
+        box-shadow: 5px 5px 5px #888;
+     }
+    </style>
     
   </head>
 <body>
@@ -69,7 +82,7 @@
         <!-- dashboard -->
         <div class="container-fluid">
                 <div class="row">
-                  <nav style="background-color: white" lass="col-md-2 d-none d-md-block bg-light sidebar" fixed>
+                  <nav style="background-color: rgb(219, 191, 191);" class="col-md-2 d-none d-md-block bg-light sidebar" fixed>
                     <div class="sidebar-sticky">
                       <ul class="nav flex-column">
                         <li class="nav-item">
@@ -82,19 +95,6 @@
                             </div>
                         </li>
                         <br>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link dropdown-toggle active" href="" id="dropdow3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span data-feather="plus"></span> Nuevo
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdown03">
-                                <a class="dropdown-item" href="editar-codigo.html">Proyecto</a>
-                                <a class="dropdown-item" href="#">Carpeta</a>
-                                <a class="dropdown-item" href="#">Archivo</a>
-                                <button id="proyectos" type="button" class="btn btn-link dropdown-item" data-toggle="modal" data-target="#proyecto">Proyecto</button>
-                                <button id="carpetas" type="button" class="btn btn-link dropdown-item" data-toggle="modal" data-target="#carpeta">Carpeta</button>
-                                <button id="archivos" type="button" class="btn btn-link dropdown-item" data-toggle="modal" data-target="#archivo">Archivo</button>
-                            </div>
-                        </li> -->
                         <li class="nav-item">
                           <a class="nav-link" href="#">
                             <span data-feather="chevrons-right"></span>
@@ -113,35 +113,19 @@
                             Mas servicios
                           </a>
                         </li><br>
-          
-                      <!-- <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                        <span>Visualiza nuestros planes</span>
-                        <a class="d-flex align-items-center text-muted" href="#">
-                          <span data-feather="plus-circle"></span>
-                        </a>
-                      </h6><br><br>
-                      <ul class="nav flex-column mb-2">
-                        <li class="nav-item">
-                            <div style="margin-left: 15px" class="form-group">
-                                <input class="btn btn-danger" type="button" onclick="location.href='planes.html'" value="Suscribete a un plan">
-                             </div>
-                        </li>
-                      </ul> -->
                     </div>
                   </nav>
                   
-                  <main style="margin-top:50px" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                  <main style="margin-top:50px" class="col-md-9 ml-sm-auto col-lg-10 ">
                         <br>
                         <div class="container">
                           <div class="row">
-                            <div class="col-7">
-                              <div id="rutas"class="row">
-                                
-                                
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                              <div id="rutas"class="row">                                
                               </div>
-
                             </div>
-                            <div style="border-color:rgb(46, 165, 42); border:2px; border-style: solid" class="col-5">
+                            <div id="map" style="border-color:rgb(46, 165, 42); border:2px; border-style: solid;      height: 500px;
+                            border-color: #013f58bf;" class="col-6">
                               visualizacion del mapa
                             </div>
                           </div>
@@ -202,10 +186,7 @@
     <script src="js/bootstrap.min.js"></script>
 
 
-    <script src="js/controlador_rutas.js"></script>
-    <!-- <script src="js/controlador_archivos_proyectos_compartido.js"></script> -->
-    <!-- Graphs -->
-    
+    <script src="js/controlador_rutas.js"></script>   
     
   </body>
 </html>

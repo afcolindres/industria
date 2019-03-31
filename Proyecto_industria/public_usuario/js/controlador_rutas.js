@@ -30,7 +30,7 @@ function cargar_rutas() {
             for (var i = 0; i < res.length; i++) {
                 $("#rutas").append(`
                 
-                <div class="col-lg-4 text-center mb-4 col-lg-4 col-md-4 col-sm-4">
+                <div class="col-lg-6 text-center mb-4 col-lg-4 col-md-4 col-sm-4">
                     <div class="border rounded" style="box-shadow: 2px 2px 5px #999">
                     <div>
                         <br>
@@ -91,3 +91,28 @@ function reservar(codigo_ruta) {
 		}
 	});
 }
+
+(function(){
+     var map = L.map('map').
+     setView([14.0886335, -87.1964868],
+     10);
+
+
+L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
+maxZoom: 20
+}).addTo(map)
+
+
+L.control.scale().addTo(map);
+L.marker([14.085357, -87.184240],{draggable: true}).addTo(map);
+L.marker([14.0886335, -87.1964868],{draggable: true}).addTo(map);
+
+
+L.Routing.control({
+  waypoints: [
+    L.latLng(14.085357, -87.184240),
+    L.latLng(14.0886335, -87.1964868)
+  ]
+}).addTo(map);
+})();

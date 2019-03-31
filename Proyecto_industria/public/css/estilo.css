@@ -1,3 +1,12 @@
+#diseno{
+    background-image: url(../img/fondo1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size:cover;
+
+}
+
 .boton_di:hover {
     background-color:#0431B4;
 }
@@ -7,22 +16,15 @@
     color: #fff;
 }
 #contenedor{
-    background-color: #fff;
-    border-radius: 5px;
+    background-color: #12121369;
+    /* border-radius: 5px; */
     padding: 30px;
-    /* margin-left: auto;
-    margin-right: auto; */
-    overflow: hidden;
-    position: absolute;
-    /* height: 400px;
-    width: 500px; */
-    left: 29%;
+    margin: 0 auto;
+    width: 410px;
     top: 50%;
-    right: 29%;
     margin-top: 100px;
-    /* margin-left: -280px; */
     box-shadow: 2px 2px 10px #666;
-    
+    color: #fff;
 }
 #imagen{
     height: 65px;
@@ -40,4 +42,27 @@
 .tamano{
     height: 40px;
     
+}
+a {
+    color: #ffffff !important;
+    text-decoration: none;
+}
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid #f8f9fa59 !important;
+}
+h6{
+    margin-top: 3% !important;
+}
+
+#btn-login{
+    background-color: rgba(217, 219, 222, 0.98);
+    border: rgba(217, 219, 222, 0.98);
+}
+#btn-login:hover{
+    background-color: rgba(95, 123, 165, 0.98);
+    color: #fff;
+    border: rgba(95, 123, 165, 0.98);
 }
