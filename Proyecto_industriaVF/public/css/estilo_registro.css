@@ -1,0 +1,38 @@
+#diseno{
+    /* background-image: url(../img/fondo1.png); */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size:cover;
+}
+#contenedor{
+    background-color:#D8D8D8;
+    border-radius: 5px;
+    padding: 30px;
+    overflow: hidden;
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    right: 30%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    /* margin-left: -280px; */
+    
+}
+#imagen{
+    height: 65px;
+    display:block;
+    margin:auto;
+    margin-bottom:20px;
+}
+
+.detalles{
+    margin-bottom:10px;
+    height: 100%;
+    width: 100%;
+    
+}
+.tamano{
+    height: 40px;
+    
+}
