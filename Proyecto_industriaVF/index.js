@@ -127,10 +127,11 @@ app.post("/consultausuario", function(req,res){
  // ///***************************registro de rutas************************ */
  app.post("/registrarRuta", function(req,res){
     var conexion = mysql.createConnection(credenciales);
-    conexion.query(`INSERT INTO tbl_rutas (nombre, descripcion, hora_salida, hora_llegada) 
-                    VALUES (?,?,?,?)`,
-        [req.body.nombre,req.body.descripcion,req.body.salida,req.body.llegada],
+    conexion.query(`INSERT INTO tbl_rutas (nombre, descripcion, hora_salida, latitud, longitud) 
+                    VALUES (?,?,?,?,?)`,
+        [req.body.nombre,req.body.descripcion,req.body.salida,req.body.llegada,req.body.longitud ],
         function(error, data, fields){
+            console.log(error)
             res.send(data);
             res.end();
             conexion.end();

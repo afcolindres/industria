@@ -2,7 +2,7 @@ $("#btn-ruta").click(function(){
 
 //***************************************************************************** */
 ////***********************registro de rutas******************************* */
-    var parametros=`nombre=${$("#text_nombre").val()}&descripcion=${$("#text_descripcion").val()}&salida=${$("#text_salida").val()}&llegada=${$("#text_llegada").val()}`;
+    var parametros=`nombre=${$("#text_nombre").val()}&descripcion=${$("#text_descripcion").val()}&salida=${$("#text_salida").val()}&llegada=${$("#text_llegada").val()}&longitud=${$("#text_longitud").val()}`;
     //alert(parametros);
     $.ajax({
         url: "/registrarRuta",
