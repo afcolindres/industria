@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-04-2019 a las 00:51:41
+-- Tiempo de generación: 31-03-2019 a las 02:59:54
 -- Versión del servidor: 5.7.14
 -- Versión de PHP: 5.6.25
 
@@ -178,12 +178,12 @@ CREATE TABLE `tbl_reserva` (
 --
 
 INSERT INTO `tbl_reserva` (`cod_reserva`, `cod_usuario`, `cod_ruta`) VALUES
-(20, 2, 1),
+(14, 2, 1),
+(2, 2, 1),
 (3, 3, 1),
 (11, 2, 1),
 (6, 2, 3),
-(15, 2, 1),
-(17, 2, 1);
+(15, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -199,20 +199,15 @@ CREATE TABLE `tbl_rutas` (
   `nombre` varchar(45) DEFAULT NULL,
   `descripcion` varchar(2000) NOT NULL,
   `hora_salida` varchar(50) NOT NULL,
-  `hora_llegada` varchar(50) NOT NULL,
-  `latitud` varchar(50) DEFAULT NULL,
-  `longitud` varchar(50) DEFAULT NULL
+  `hora_llegada` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_rutas`
 --
 
-INSERT INTO `tbl_rutas` (`cod_ruta`, `cod_hora`, `cod_bus`, `nombre`, `descripcion`, `hora_salida`, `hora_llegada`, `latitud`, `longitud`) VALUES
-(1, NULL, NULL, 'Hospital Escuela - Kennedy', 'Recorrido: Boulevard Suyapa, Colonia el hogar, plaza Miraflores, Kennedy', '8:00 pm', '8:30:pm', '14.063435', '-87.178713'),
-(2, NULL, NULL, 'Hospital Escuela - El carrizal', '', '8:30 pm', '', '14.108097', '-87.245667'),
-(3, NULL, NULL, 'Hospital Escuela - Av los proceres', '', '9:15 pm', '', '14.102727', '-87.185985'),
-(4, NULL, NULL, 'Hospital Escuela - San miguel', '', '9:45 pm', '', '14.100918', '-87.164460');
+INSERT INTO `tbl_rutas` (`cod_ruta`, `cod_hora`, `cod_bus`, `nombre`, `descripcion`, `hora_salida`, `hora_llegada`) VALUES
+(1, NULL, NULL, 'Hospital-Kennedy', 'Recorrido: Boulevard Suyapa, Colonia el hogar, plaza Miraflores, Kennedy', '8:00 am', '8:30:am');
 
 -- --------------------------------------------------------
 
@@ -361,12 +356,12 @@ ALTER TABLE `tbl_persona`
 -- AUTO_INCREMENT de la tabla `tbl_reserva`
 --
 ALTER TABLE `tbl_reserva`
-  MODIFY `cod_reserva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `cod_reserva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT de la tabla `tbl_rutas`
 --
 ALTER TABLE `tbl_rutas`
-  MODIFY `cod_ruta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `cod_ruta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `tbl_tipos_colaborador`
 --
